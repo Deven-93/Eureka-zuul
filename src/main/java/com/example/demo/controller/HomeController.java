@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.model.Employee;
 import com.example.demo.repository.MyJpaRepo;
-
-
+//
 
 @RestController
 @RequestMapping("/home")
@@ -34,8 +33,9 @@ public class HomeController {
 		return mv;
 	}
 	
-	@PostMapping("/add")
 	
+	// ---- Add employee
+	@PostMapping("/add")
 	public ModelAndView add(@ModelAttribute("emp") Employee emp)
 	{
 		ModelAndView mv = new ModelAndView();
